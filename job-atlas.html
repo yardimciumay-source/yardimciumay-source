@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080f1d">
+  <meta name="description" content="Job Atlas — an independent project by Aslı Umay Yardımcı.">
+  <title>Job Atlas — Aslı Umay Yardımcı</title>
+  <link rel="stylesheet" href="styles-v2.css">
+
+  <style>
+    .atlas-hero {
+      padding-top: 105px;
+      padding-bottom: 90px;
+    }
+    .atlas-hero h1 {
+      font-size: clamp(70px, 11vw, 145px);
+      font-weight: 600;
+      letter-spacing: -.085em;
+      line-height: 1.05;
+      margin: 35px 0;
+    }
+    .atlas-hero h1 em {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      color: var(--accent);
+    }
+    .atlas-lead {
+      max-width: 720px;
+      font-size: clamp(18px, 2.3vw, 25px);
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    .atlas-status {
+      display: inline-block;
+      border: 1px solid #42688b;
+      border-radius: 40px;
+      padding: 12px 19px;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-top: 25px;
+    }
+    .atlas-section {
+      border-top: 1px solid var(--border);
+      padding-top: 80px;
+      padding-bottom: 110px;
+    }
+    .atlas-section h2 {
+      font-size: clamp(35px, 5vw, 65px);
+      font-weight: 600;
+      letter-spacing: -.06em;
+      margin: 0 0 25px;
+    }
+    .atlas-section p {
+      max-width: 750px;
+      font-size: 17px;
+      line-height: 1.9;
+      color: var(--muted);
+    }
+    .atlas-panel {
+      background: radial-gradient(
+        ellipse at 70% 30%,
+        #1b4c7d, #101b2d 65%
+      );
+      border: 1px solid var(--border);
+      padding: 45px;
+      margin-top: 45px;
+    }
+    .atlas-panel strong {
+      display: block;
+      font-size: clamp(36px, 6vw, 75px);
+      letter-spacing: -.06em;
+      color: #b9e6ff;
+    }
+    .atlas-panel span {
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+    @media(max-width:650px) {
+      .atlas-hero {padding-top:65px;}
+      .atlas-section {padding:60px 0;}
+      .atlas-panel {padding:25px;}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      AUY<span class="brand-dot">.</span>
+      <span class="brand-caption">ECONOMICS / RESEARCH</span>
+    </a>
+
+    <button class="menu-toggle"
+            type="button"
+            aria-controls="primary-nav"
+            aria-expanded="false">
+      Menu ☰
+    </button>
+
+    <nav class="nav" id="primary-nav"
+         aria-label="Main navigation">
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="research-v2.html">Research</a>
+      <a href="about-v2.html">About</a>
+      <a href="contact-v2.html">Contact</a>
+    </nav>
+
+    <a class="header-cta" href="contact-v2.html">
+      Let's connect <span>↗</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="atlas-hero section-wrap">
+      <div class="section-kicker">
+        01 / INDEPENDENT PROJECT
+      </div>
+
+      <h1>Job <em>Atlas.</em></h1>
+
+      <p class="atlas-lead">
+        An independent project currently in development.
+        Exploring ideas, building solutions and turning
+        curiosity into something tangible.
+      </p>
+
+      <span class="atlas-status">● IN PROGRESS</span>
+    </section>
+
+    <section class="atlas-section section-wrap">
+      <div class="section-kicker">ABOUT THE PROJECT</div>
+      <h2>From idea to <em>reality.</em></h2>
+
+      <p>
+        Job Atlas is an ongoing independent project.
+        This page will document its development,
+        key features and progress as the project evolves.
+      </p>
+
+      <div class="atlas-panel">
+        <span>PROJECT 001 / DEVELOPMENT</span>
+        <strong>Job Atlas ↗</strong>
+        <p>More details coming soon.</p>
+      </div>
+
+      <div class="page-actions">
+        <a class="pill-link" href="projects.html">
+          ← All Projects
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-wrap">
+    <span>© <span id="year">2026</span> ASLI UMAY YARDIMCI</span>
+    <span>BUILT WITH CURIOSITY · HOSTED ON GITHUB PAGES</span>
+    <a href="projects.html">BACK TO PROJECTS ↑</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    const button = document.querySelector(".menu-toggle");
+    const nav = document.getElementById("primary-nav");
+
+    button.addEventListener("click", function () {
+      const open = nav.classList.toggle("open");
+      button.setAttribute("aria-expanded", String(open));
+    });
+  </script>
+</body>
+</html>
