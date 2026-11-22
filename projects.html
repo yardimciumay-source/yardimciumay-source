@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080f1d">
+  <title>Projects — Aslı Umay Yardımcı</title>
+
+  <link rel="stylesheet" href="styles-v2.css">
+
+  <style>
+    .projects-hero {
+      padding-top: 115px;
+      padding-bottom: 75px;
+    }
+
+    .projects-hero h1 {
+      font-size: clamp(65px, 9vw, 122px);
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -.075em;
+      margin: 25px 0;
+    }
+
+    .projects-hero h1 em {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    .projects-hero p {
+      max-width: 650px;
+      font-size: 19px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .projects-area {
+      padding-top: 55px;
+      padding-bottom: 140px;
+      border-top: 1px solid var(--border);
+    }
+
+    .job-visual {
+      background:
+        radial-gradient(circle at 50% 45%,
+          #225f9b 0%,
+          #112f50 45%,
+          #091728 100%);
+    }
+
+    .atlas-art {
+      width: 155px;
+      height: 155px;
+      border: 1px solid #85cfff;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      box-shadow:
+        0 0 0 22px #63b4ff15,
+        0 0 0 48px #63b4ff08,
+        0 0 55px #63b4ff33;
+      color: #c9ebff;
+      font-size: 62px;
+      font-weight: 600;
+      letter-spacing: -6px;
+    }
+
+    .coming-card {
+      min-height: 420px;
+      border: 1px dashed #355473;
+      background: #0c1727;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .coming-card .plus {
+      font-size: 55px;
+      font-weight: 300;
+      color: var(--accent);
+    }
+
+    .coming-card h3 {
+      font-size: 29px;
+      letter-spacing: -1px;
+      margin: 20px 0 10px;
+    }
+
+    .coming-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .project-card:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    @media(max-width:650px) {
+      .projects-hero {
+        padding-top: 70px;
+      }
+      .projects-area {
+        padding-bottom: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      AUY<span class="brand-dot">.</span>
+      <span class="brand-caption">
+        ECONOMICS / RESEARCH
+      </span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-controls="primary-nav"
+      aria-expanded="false">
+      Menu ☰
+    </button>
+
+    <nav class="nav"
+         id="primary-nav"
+         aria-label="Main navigation">
+      <a href="projects.html"
+         aria-current="page">Projects</a>
+      <a href="research-v2.html">Research</a>
+      <a href="about-v2.html">About</a>
+      <a href="contact-v2.html">Contact</a>
+    </nav>
+
+    <a class="header-cta" href="contact-v2.html">
+      Let's connect <span>↗</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="projects-hero section-wrap">
+      <div class="section-kicker">
+        01 / PROJECT ARCHIVE
+      </div>
+
+      <h1>Selected <em>projects.</em></h1>
+
+      <p>
+        A growing collection of independent projects,
+        digital experiments and ideas brought to life.
+      </p>
+    </section>
+
+    <section class="projects-area section-wrap">
+      <div class="project-grid">
+
+        <a class="project-card"
+           href="job-atlas.html">
+
+          <div class="card-top">
+            <span>01 / IN PROGRESS</span>
+            <span class="arrow">↗</span>
+          </div>
+
+          <div class="project-visual job-visual">
+            <div class="atlas-art">JA</div>
+            <span class="visual-label">
+              JOB ATLAS / 001
+            </span>
+          </div>
+
+          <h3>Job Atlas</h3>
+
+          <p>
+            An independent project in development.
+            More details coming soon.
+          </p>
+
+          <span class="card-footer">
+            EXPLORE PROJECT <span>↗</span>
+          </span>
+        </a>
+
+        <div class="coming-card">
+          <span class="plus">+</span>
+          <h3>More coming soon.</h3>
+          <p>
+            New projects and experiments
+            will be featured here.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-wrap">
+    <span>© <span id="year">2026</span>
+      ASLI UMAY YARDIMCI</span>
+    <span>
+      BUILT WITH CURIOSITY · HOSTED ON GITHUB PAGES
+    </span>
+    <a href="index.html">BACK TO HOME ↑</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    const button =
+      document.querySelector(".menu-toggle");
+    const nav =
+      document.getElementById("primary-nav");
+
+    button.addEventListener("click", function() {
+      const open = nav.classList.toggle("open");
+      button.setAttribute("aria-expanded", String(open));
+    });
+  </script>
+</body>
+</html>
