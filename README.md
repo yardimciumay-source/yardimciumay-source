@@ -17,7 +17,7 @@ This repository hosts my personal portfolio website, featuring selected research
 
 Explore my research, writing, and professional background through my personal website.
 
-**Website:** [Visit My Portfolio](https://YOUR-USERNAME.github.io/)
+**Website:** [Visit My Portfolio](https://yardimciumay-source.github.io/yardimciumay-source/index.html)
 
 > Replace the link above with your actual GitHub Pages URL.
 
